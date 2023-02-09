@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/FancyCalc/static/css/main.2147000c.css",
+    "main.js": "/FancyCalc/static/js/main.d285dd91.js",
+    "static/js/787.28cb0dcd.chunk.js": "/FancyCalc/static/js/787.28cb0dcd.chunk.js",
+    "static/media/Epyval.ttf": "/FancyCalc/static/media/Epyval.b14ab3f6c0d5388c1dfe.ttf",
+    "index.html": "/FancyCalc/index.html",
+    "main.2147000c.css.map": "/FancyCalc/static/css/main.2147000c.css.map",
+    "main.d285dd91.js.map": "/FancyCalc/static/js/main.d285dd91.js.map",
+    "787.28cb0dcd.chunk.js.map": "/FancyCalc/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2147000c.css",
+    "static/js/main.d285dd91.js"
+  ]
+}
