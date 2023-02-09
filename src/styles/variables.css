@@ -1,0 +1,67 @@
+:root {
+	font-size: 7px;
+	/*colours   -   -   -   -   -   -   -   -   -   -   -   -   -   -       -*/
+	--test-color: #338303;
+
+	--light-blue: #87ceeb;
+	--light-green: #c6ffdd;
+	--light-yellow: #fbd786;
+
+	/* --light-blue: #ca9841;
+	--light-green: #32657e;
+	--light-yellow: #932f31; */
+
+	--gray-1: #f6f8fa;
+	--gray-2: #d0d7de;
+	--gray-3: #6e7781;
+	--gray-4: #24292f;
+
+	--backgroun-color: #f6f8fa;
+	--outer-border-color: #24292f;
+	--inner-border-color: #6e7781;
+
+	--button-color: #d0d7de;
+	--button-color: #f6f8fa;
+	--light-pink: #f7797d;
+
+	--screen-color: #002d11;
+
+	/* claculator position   -   -   -   -   -   -   -   -   -   -   -   -   -   -  */
+	--distance-from-top-of-viewport: 22vh;
+
+	/* claculator dimentions   -   -   -   -   -   -   -   -   -   -   -   -   -   -  */
+	--calculator-width: 60rem;
+	--border: 2rem;
+	--button-border: 0.25rem;
+	--button-border-active: 0.4rem;
+
+	/* --calculator-height: 98rem; not explicitly defined */
+	--colorBackground-width: 58rem;
+	--colorBackground-height: 89rem;
+
+	--colomn-width: 10rem;
+	--colomn-width: 11.5rem;
+
+	/* --column-height: 10rem; */
+	--gap-width: 4rem;
+	--gap-width: 2rem;
+
+	/* --gap-height: 10rem; */
+	--button-shadow: 0.4rem 0.4rem var(--outer-border-color), inset 0 0 2rem grey;
+	--button-font-size: 2rem;
+
+	--screenOutside-border: 2.5rem solid var(--outer-border-color);
+	--screenOutside-height: 19rem;
+
+	--screenInside-width: 100%;
+	--screenInside-height: 15rem;
+	--screenInside-border: 2.5rem solid var(--button-color);
+
+	/* gradient dimentions   -   -   -   -   -   -   -   -   -   -   -   -   -   -  */
+	--gradient-before-starting-dimenions: 200rem;
+	--gradient-before-ending-dimenions: 3200rem;
+
+	/* heading   -   -   -   -   -   -   -   -   -   -   -   -   -   -  */
+	--heading-font-size: 8rem;
+	--heading-margin-top: 2rem;
+}

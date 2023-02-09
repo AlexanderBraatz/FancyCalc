@@ -1,0 +1,76 @@
+#screenOutside {
+	/* width: 600px; */
+	margin: auto;
+	/* padding: 10px; */
+	transform: skewX(3deg);
+	transform-origin: bottom;
+
+	position: relative;
+	z-index: 2;
+	background-color: transparent;
+	border: var(--screenOutside-border);
+	height: var(--screenOutside-height);
+	/* make the screen look nice and bee transparent  */
+	box-shadow: 2rem 3.5rem 3rem grey;
+	border-radius: 4% 4% 0 0;
+}
+
+#screenInside {
+	width: var(--screenInside-width);
+
+	background-color: var(--screen-color);
+
+	word-wrap: break-word; /* wrap content onto new line */
+	word-break: break-all; /* wrap content onto new line */
+
+	transform-origin: bottom;
+
+	/* box-shadow: 6px 4px black; */
+	font-size: 0.85em;
+	/* line-height: 0.85em; */
+	/* display: inline-block; */
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	/* padding: 30px 5px; */
+	white-space: nowrap;
+
+	position: relative;
+	z-index: 2;
+	/* background-color: transparent; */
+	border: var(--screenInside-border);
+	height: var(--screenInside-height);
+
+	/* flex-direction: column; */
+	align-items: right;
+	/* align-content: center; */
+	height: 15rem;
+	width: 100.5%;
+	transform: skewX(1deg);
+	border-right: 2.4rem solid var(--button-color);
+}
+
+#calculation {
+	display: block;
+	height: 4.9rem;
+	font-family: 'Segment7Standard', sans-serif;
+	background-color: transparent;
+	text-align: right;
+	font-size: 5rem;
+	/* transform: skewX(15deg); */
+	transform-origin: bottom;
+
+	color: var(--light-green);
+}
+#display {
+	display: block;
+	font-family: 'Segment7Standard', sans-serif;
+	background-color: transparent;
+	text-align: right;
+	font-size: 4.9rem;
+	/* transform: skewX(15deg); */
+	transform-origin: bottom;
+	color: var(--light-green);
+	height: 5rem;
+	width: 100%;
+	border-top: 0.2rem dashed var(--gray-4);
+}

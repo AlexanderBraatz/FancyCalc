@@ -1,0 +1,65 @@
+.mouse-cursor-gradient-tracking {
+	position: absolute;
+	background: #7983ff;
+	border: none;
+	overflow: hidden;
+	width: var(--colorBackground-width);
+	height: var(--colorBackground-height);
+
+	top: calc(var(--distance-from-top-of-viewport) + 0.9rem);
+	left: 50%;
+	transform: translate(-50%);
+	z-index: 1;
+}
+
+.mouse-cursor-gradient-tracking:before {
+	position: absolute; /* this needs to be absolute so the overflow hidden works*/
+
+	content: '';
+	left: calc(var(--x) - 50vw + calc(var(--colorBackground-width) / 2));
+	top: calc(var(--y) - var(--distance-from-top-of-viewport));
+
+	transform: translate(-50%, -50%);
+	z-index: 1;
+
+	--position1: var(--light-blue);
+	--position2: var(--light-green);
+	--position3: var(--light-yellow);
+	/* --position4: var(--light-pink); */
+
+	background: radial-gradient(
+		circle closest-side,
+
+		var(--position3) 0.02441406%,
+		var(--position2) 0.04882812%,
+		var(--position1) 0.09765625%,
+		var(--position2) 0.1953125%,
+		var(--position3) 0.390625%,
+		var(--position2) 0.78125%,
+		var(--position1) 1.5625%,
+		var(--position2) 3.125%,
+		var(--position3) 6.25%,
+		var(--position2) 12.5%,
+		var(--position1) 25%,
+		var(--position2) 50%,
+		var(--position3) 100%
+	);
+	/* width: 2000px;
+	height: 2000px;  just keep incase keyframes 0% isnt enough */
+	animation-timing-function: cubic-bezier(0.81, 0.19, 0.84, 0.66);
+	animation-name: zoomInEstimate;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+@keyframes zoomInEstimate {
+	0% {
+		width: var(--gradient-before-starting-dimenions);
+		height: var(--gradient-before-starting-dimenions);
+	}
+	100% {
+		width: var(--gradient-before-ending-dimenions);
+		height: var(--gradient-before-ending-dimenions);
+	}
+}

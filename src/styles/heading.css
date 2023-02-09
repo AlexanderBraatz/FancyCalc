@@ -1,0 +1,6 @@
+h1 {
+	font-style: italic;
+	font-size: var(--heading-font-size);
+	margin-top: var(--heading-margin-top);
+	background-color: var(--test-color);
+}
