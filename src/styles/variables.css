@@ -10,6 +10,8 @@
 	/* --light-blue: #ca9841;
 	--light-green: #32657e;
 	--light-yellow: #932f31; */
+	--screen-green-1: #9fb5a6;
+	--screen-green-2: #6caa81;
 
 	--gray-1: #f6f8fa;
 	--gray-2: #d0d7de;
@@ -25,6 +27,7 @@
 	--light-pink: #f7797d;
 
 	--screen-color: #002d11;
+	--screen-color: var(--screen-green-2);
 
 	/* claculator position   -   -   -   -   -   -   -   -   -   -   -   -   -   -  */
 	--distance-from-top-of-viewport: 22vh;

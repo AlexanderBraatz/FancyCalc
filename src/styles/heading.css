@@ -3,4 +3,6 @@ h1 {
 	font-size: var(--heading-font-size);
 	margin-top: var(--heading-margin-top);
 	background-color: var(--test-color);
+
+	font-family: 'Epyval';
 }

@@ -17,3 +17,8 @@
 p {
 	text-decoration: line-through;
 }
+
+@font-face {
+	font-family: 'Epyval';
+	src: url('./fonts/Epyval.ttf') format('truetype');
+}

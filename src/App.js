@@ -1,5 +1,7 @@
 import './App.css';
-import './styles/fonts.css';
+
+// import './styles/fonts.css';
+import './fonts/Epyval.ttf';
 import './styles/calculator.css';
 import './styles/colorBackground.css';
 import './styles/inputField.css';
@@ -54,12 +56,26 @@ function App() {
 							// {(operationalState === 'IS_RSET' )? style={ backgroundColor: 'transparent' }:styles={}}
 							style={
 								operationalState === IS_SOLVED
-									? { backgroundColor: 'transparent' }
+									? { backgroundColor: 'transparent', color: '#000' }
 									: {}
 							}
 						>
-							<span id="calculation">{calculation.join('')}</span>
-							<span id="display">{display.join('')}</span>
+							<div className="screenGlass">
+								<span id="calculation">
+									{calculation
+										.map(char =>
+											char === '*' ? '×' : char === '/' ? '÷' : char
+										)
+										.join('')}
+								</span>
+								<span id="display">
+									{display
+										.map(char =>
+											char === '*' ? '×' : char === '/' ? '÷' : char
+										)
+										.join('')}
+								</span>
+							</div>
 						</div>
 					</div>
 					<div id="interfaceOutside">
