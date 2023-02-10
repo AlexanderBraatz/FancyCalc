@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/FancyCalc/static/css/main.2147000c.css",
-    "main.js": "/FancyCalc/static/js/main.d285dd91.js",
+    "main.css": "/FancyCalc/static/css/main.c4476d83.css",
+    "main.js": "/FancyCalc/static/js/main.b334c18e.js",
     "static/js/787.28cb0dcd.chunk.js": "/FancyCalc/static/js/787.28cb0dcd.chunk.js",
+    "static/media/KgHoloceneRegular-lgjKy.ttf": "/FancyCalc/static/media/KgHoloceneRegular-lgjKy.df95a65a5e30c65ec341.ttf",
+    "static/media/ChalkboyRegular-vmXe7.otf": "/FancyCalc/static/media/ChalkboyRegular-vmXe7.399802c0277d21713ca9.otf",
+    "static/media/EraserRegular-DO1D.ttf": "/FancyCalc/static/media/EraserRegular-DO1D.3f8aecef660ae811b2bc.ttf",
     "static/media/Epyval.ttf": "/FancyCalc/static/media/Epyval.b14ab3f6c0d5388c1dfe.ttf",
     "index.html": "/FancyCalc/index.html",
-    "main.2147000c.css.map": "/FancyCalc/static/css/main.2147000c.css.map",
-    "main.d285dd91.js.map": "/FancyCalc/static/js/main.d285dd91.js.map",
+    "main.c4476d83.css.map": "/FancyCalc/static/css/main.c4476d83.css.map",
+    "main.b334c18e.js.map": "/FancyCalc/static/js/main.b334c18e.js.map",
     "787.28cb0dcd.chunk.js.map": "/FancyCalc/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2147000c.css",
-    "static/js/main.d285dd91.js"
+    "static/css/main.c4476d83.css",
+    "static/js/main.b334c18e.js"
   ]
 }
