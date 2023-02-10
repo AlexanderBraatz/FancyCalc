@@ -1,6 +1,6 @@
 .mouse-cursor-gradient-tracking {
 	position: absolute;
-	background: #7983ff;
+	background: var(--light-yellow);
 	border: none;
 	overflow: hidden;
 	width: var(--colorBackground-width);

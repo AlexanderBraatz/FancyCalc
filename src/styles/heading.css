@@ -1,8 +1,25 @@
 h1 {
-	font-style: italic;
-	font-size: var(--heading-font-size);
-	margin-top: var(--heading-margin-top);
-	background-color: var(--test-color);
+	margin: 0;
+	position: absolute;
+	top: 2rem;
+	left: 50%;
+	transform: translate(-50%);
+}
 
-	font-family: 'Epyval';
+#heading-svg {
+	fill: transparent;
+	width: 150rem;
+	width: 120rem;
+	height: auto;
+	/* background-color: aqua; */
+}
+
+#heading-textPath {
+	fill: #ff9800;
+	background-color: var(--light-yellow);
+	font-size: 9rem;
+	font-family: 'Chalkboy';
+	/* font-family: 'Eraser'; */
+	/* font-family: 'KgHolocen'; */
+	/* text-align: center; */
 }

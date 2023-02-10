@@ -6,6 +6,8 @@ import './styles/calculator.css';
 import './styles/colorBackground.css';
 import './styles/inputField.css';
 import './styles/screen.css';
+import './styles/header.css';
+import './styles/footer.css';
 import './styles/heading.css';
 import './styles/variables.css';
 
@@ -44,7 +46,38 @@ function App() {
 				className="App"
 				onMouseMove={event => updateMousePosition(event)}
 			>
-				<h1>thsi is my shitty cool calculator</h1>
+				<header>
+					<p className="description">
+						From Boring to Beautiful: The Calculator Redesigned for Style and
+						Function
+					</p>
+				</header>
+				<h1>
+					<svg
+						id="heading-svg"
+						viewBox="0 0 500 500"
+					>
+						<path
+							className="heading-path"
+							id="curve"
+							d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97"
+						/>
+						<text
+							id="heading-text"
+							width="500"
+						>
+							<textPath
+								id="heading-textPath"
+								alignment-baseline="top"
+								textAnchor="middle"
+								startOffset="50%"
+								xlinkHref="#curve"
+							>
+								Fancy Calculator
+							</textPath>
+						</text>
+					</svg>
+				</h1>
 				<div
 					className="mouse-cursor-gradient-tracking"
 					ref={colorBack}
@@ -82,29 +115,25 @@ function App() {
 						<div id="interfaceInside">
 							<button
 								onClick={clearCalculator} // passing it as a callback event handler
-								className="spanTwo"
+								className="spanTwo button-finish"
 							>
 								AC
 							</button>
 							<div />
 
-							<button onClick={() => applyOpeator('/')}>÷</button>
+							<button
+								className="button-operator"
+								onClick={() => applyOpeator('/')}
+							>
+								÷
+							</button>
 							<div />
-							<button onClick={() => applyOpeator('*')}>x</button>
-							<div />
-							<div />
-							<div />
-							<div />
-							<div />
-							<div />
-							<div />
-							<button onClick={() => concatDigit('7')}>7</button>
-							<div />
-							<button onClick={() => concatDigit('8')}>8</button>
-							<div />
-							<button onClick={() => concatDigit('9')}>9</button>
-							<div />
-							<button onClick={() => applyOpeator('-')}>-</button>
+							<button
+								className="button-operator"
+								onClick={() => applyOpeator('*')}
+							>
+								x
+							</button>
 							<div />
 							<div />
 							<div />
@@ -112,13 +141,33 @@ function App() {
 							<div />
 							<div />
 							<div />
-							<button onClick={() => concatDigit('4')}>4</button>
+							<button
+								className="button-digit"
+								onClick={() => concatDigit('7')}
+							>
+								7
+							</button>
 							<div />
-							<button onClick={() => concatDigit('5')}>5</button>
+							<button
+								className="button-digit"
+								onClick={() => concatDigit('8')}
+							>
+								8
+							</button>
 							<div />
-							<button onClick={() => concatDigit('6')}>6</button>
+							<button
+								className="button-digit"
+								onClick={() => concatDigit('9')}
+							>
+								9
+							</button>
 							<div />
-							<button onClick={() => applyOpeator('+')}>+</button>
+							<button
+								className="button-operator"
+								onClick={() => applyOpeator('-')}
+							>
+								-
+							</button>
 							<div />
 							<div />
 							<div />
@@ -126,15 +175,64 @@ function App() {
 							<div />
 							<div />
 							<div />
-							<button onClick={() => concatDigit('1')}>1</button>
+							<button
+								className="button-digit"
+								onClick={() => concatDigit('4')}
+							>
+								4
+							</button>
 							<div />
-							<button onClick={() => concatDigit('2')}>2</button>
+							<button
+								className="button-digit"
+								onClick={() => concatDigit('5')}
+							>
+								5
+							</button>
 							<div />
-							<button onClick={() => concatDigit('3')}>3</button>
+							<button
+								className="button-digit"
+								onClick={() => concatDigit('6')}
+							>
+								6
+							</button>
+							<div />
+							<button
+								className="button-operator"
+								onClick={() => applyOpeator('+')}
+							>
+								+
+							</button>
+							<div />
+							<div />
+							<div />
+							<div />
+							<div />
+							<div />
+							<div />
+							<button
+								className="button-digit"
+								onClick={() => concatDigit('1')}
+							>
+								1
+							</button>
+							<div />
+							<button
+								className="button-digit"
+								onClick={() => concatDigit('2')}
+							>
+								2
+							</button>
+							<div />
+							<button
+								className="button-digit"
+								onClick={() => concatDigit('3')}
+							>
+								3
+							</button>
 							<div />
 							<button
 								onClick={equals}
-								className="spanTwoUp"
+								className="spanTwoUp button-finish"
 							>
 								=
 							</button>
@@ -147,17 +245,39 @@ function App() {
 							<div />
 							<button
 								onClick={() => concatDigit('0')}
-								className="spanTwo"
+								className="button-digit spanTwo"
 							>
 								0
 							</button>
 							<div />
-							<button onClick={decimalPoint}>.</button>
+							<button
+								className="button-digit"
+								onClick={decimalPoint}
+							>
+								.
+							</button>
 							<div />
 						</div>
 					</div>
 				</div>
-				<p>Created by Alexander Braatz</p>
+				<footer>
+					<div className="footer-content">
+						<p>Built by Alexander Braatz.</p>
+						<p>
+							Finalised <time datetime="2023-02-10">February 2, 2023</time>
+						</p>
+						<p>
+							View my projects{' '}
+							<a
+								href="https://alexanderbraatz.github.io/PortfolioPage/"
+								target="_blank"
+							>
+								Here
+							</a>
+							.
+						</p>
+					</div>
+				</footer>
 			</div>
 		</React.Fragment>
 	);

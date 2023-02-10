@@ -3,7 +3,15 @@
 
 	background-color: var(--backgroun-color);
 	height: 100vh;
-	/* width: 1000px; */
+	background: rgb(255, 251, 251);
+	background: linear-gradient(
+		180deg,
+		rgba(255, 251, 251, 1) 0%,
+		rgba(254, 244, 245, 1) 50%,
+		rgba(254, 244, 245, 1) 83%,
+		rgba(255, 251, 251, 1) 98%
+	);
+	background: rgb(255, 251, 251);
 }
 
 *,
@@ -14,11 +22,22 @@
 	font-weight: normal;
 }
 
-p {
-	text-decoration: line-through;
-}
-
 @font-face {
 	font-family: 'Epyval';
 	src: url('./fonts/Epyval.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Chalkboy';
+	src: url('./fonts/ChalkboyRegular-vmXe7.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Eraser';
+	src: url('./fonts/EraserRegular-DO1D.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'KgHolocen';
+	src: url('./fonts/KgHoloceneRegular-lgjKy.ttf') format('truetype');
 }

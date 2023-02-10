@@ -6,6 +6,7 @@
 	/* width: fit-content; */
 	/* margin: auto; */
 	border: var(--border) solid var(--outer-border-color);
+	border: 2.5rem solid var(--outer-border-color);
 	box-shadow: 2rem 3rem 3rem grey;
 	border-radius: 0 0 1.5rem 1.5rem;
 }
@@ -19,6 +20,7 @@
 	align-content: center;
 
 	border: var(--border) solid var(--inner-border-color);
+	border: 2.5rem solid var(--inner-border-color);
 	/* shadow */
 	/* box-shadow: 0 0 3rem 0 var(--light-pink) inset; */
 	/* width: 560px; */
@@ -39,8 +41,8 @@
 
 	z-index: 1;
 }
-#interfaceInside button {
-	font-family: 'Source Code Pro', monospace;
+button {
+	font-family: 'Helvetica Leight', monospace;
 	z-index: 2;
 	cursor: pointer;
 	/* font-size: 2rem;
@@ -69,14 +71,32 @@
 	/* a fast one way and slow the way back would be better */
 }
 
+.button-digit {
+	background-color: var(--button-color-digit);
+}
+.button-operator {
+	background-color: var(--button-color-operator);
+}
+.button-finish {
+	background-color: var(--button-color-finish);
+}
+
 #interfaceInside button:hover {
-	transition: 0.3s;
+	/* transition: 'box-shadow' 0s;
+	transition: 'background-color' 10.3s; */
+	transition-duration: 0.3s, 0.1s;
+	transition-property: background-color, box-shadow;
 	background-color: transparent;
 }
 
 #interfaceInside button:active {
-	transition: 0.1s;
+	transition: 0.05s;
 	border: var(--button-border-active) solid var(--outer-border-color);
+	font-size: 2.8rem;
+	transition-delay: 0.05s;
+	transition-property: border;
+	box-shadow: 0 0 var(--outer-border-color), inset 0rem 0rem 3rem grey;
+	transform: scale(1);
 }
 
 .spanTwo {
