@@ -18,13 +18,12 @@
 	display: grid;
 	justify-content: center;
 	align-content: center;
-
+	cursor: pointer;
 	border: var(--border) solid var(--inner-border-color);
 	border: 2.5rem solid var(--inner-border-color);
 	/* shadow */
 	/* box-shadow: 0 0 3rem 0 var(--light-pink) inset; */
 	/* width: 560px; */
-
 	grid-template-columns: repeat(3, var(--colomn-width) var(--gap-width)) var(
 			--colomn-width
 		);
@@ -95,7 +94,8 @@ button {
 	font-size: 2.8rem;
 	transition-delay: 0.05s;
 	transition-property: border;
-	box-shadow: 0 0 var(--outer-border-color), inset 0rem 0rem 3rem grey;
+	box-shadow: 0 0 var(--outer-border-color), inset 0rem 0rem 3rem grey,
+		inset 0rem 0rem 1rem grey;
 	transform: scale(1);
 }
 

@@ -115,7 +115,7 @@ function applyOpeator(state, action) {
 			return moveToState(FIRST_OPERATOR_SELECTION, {
 				...state,
 				calculation: [...state.display, action.payload], //start next calculation with result of the last one and add new operator
-				display: action.payload
+				display: [action.payload]
 			});
 		default:
 			return { ...state, display: 'switch error' }; //catch error during development

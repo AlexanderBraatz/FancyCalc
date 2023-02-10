@@ -68,7 +68,7 @@ function App() {
 						>
 							<textPath
 								id="heading-textPath"
-								alignment-baseline="top"
+								alignmentBaseline="top"
 								textAnchor="middle"
 								startOffset="50%"
 								xlinkHref="#curve"
@@ -264,7 +264,7 @@ function App() {
 					<div className="footer-content">
 						<p>Built by Alexander Braatz.</p>
 						<p>
-							Finalised <time datetime="2023-02-10">February 2, 2023</time>
+							Finalised <time dateTime="2023-02-10">February 2, 2023</time>
 						</p>
 						<p>
 							View my projects{' '}
