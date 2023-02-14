@@ -59,29 +59,32 @@
 
 #calculation {
 	display: block;
-	height: 50%;
+	height: 40%;
 	font-family: 'Epyval', sans-serif;
 	background-color: transparent;
 
 	text-align: right;
-	font-size: 4.9rem;
+	font-size: 4rem;
 	/* transform: skewX(15deg); */
 	transform-origin: bottom;
 
 	color: inherit;
 	line-height: 100%;
 	/* box-shadow: inset 0rem 1rem 0.5rem var(--gray-4); */
+	/* font-weight: bold; */
+	padding-right: 0.2rem;
 }
 #display {
 	display: block;
 	font-family: 'Epyval', sans-serif;
 	background-color: transparent;
 	text-align: right;
-	font-size: 4.9rem;
+	font-size: 6rem;
 	/* transform: skewX(15deg); */
 	transform-origin: bottom;
 	color: inherit;
-	height: 50%;
+	height: 60%;
 	width: 100%;
 	line-height: 100%;
+	font-weight: bold;
 }

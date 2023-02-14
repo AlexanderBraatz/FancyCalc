@@ -30,11 +30,11 @@ const initialState = {
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case PRESS_DIGIT:
-			return concatDigit(state, action); //digit was clicked
+			return preventOverflwow(state, concatDigit(state, action)); //digit was clicked
 		case PRESS_OPERATOR:
-			return applyOpeator(state, action); //operator was clicked +,-,*,/
+			return preventOverflwow(state, applyOpeator(state, action)); //operator was clicked +,-,*,/
 		case DECIMAL_POINT:
-			return decimalPoint(state, action); //decimal point was clicked
+			return preventOverflwow(state, decimalPoint(state, action)); //decimal point was clicked
 		case EQUALS:
 			return equals(state, action); //euals sign was clicked
 		case CLEAR_CALCULATOR:
@@ -153,19 +153,28 @@ function equals(state) {
 		case IS_SOLVED: //intentional followthrough
 			return state; // ignore input
 		case IS_TYPING_NUMBER:
-			return moveToState(IS_SOLVED, showEquasion(state)); //show result and equasion
+			return moveToState(IS_SOLVED, showEquasion(state, 0)); //show result and equasion
 		case FIRST_OPERATOR_SELECTION:
-			return moveToState(IS_SOLVED, showEquasion(removeToken(state))); //show result and equasion
+			return moveToState(IS_SOLVED, showEquasion(removeToken(state)), 1); //show result and equasion
 		case SECOND_OPERATOR_SELECTION:
 			return moveToState(
 				IS_SOLVED,
-				showEquasion(removeToken(removeToken(state))) //show result and equasion
+				showEquasion(removeToken(removeToken(state)), 2) //show result and equasion
 			);
 		default:
 			return { ...state, display: 'switch error' }; //catch error during development
 	}
 }
 // repeated function -   -   -   -  -   -   -   -   -   -   -   -    -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+
+let preventOverflwow = (state, callback) => {
+	if (state.calculation.length < 13 || state.operationalState === IS_SOLVED) {
+		return callback;
+	} else {
+		return state;
+	}
+};
+
 function appendToken(state, token) {
 	return {
 		...state,
@@ -187,12 +196,28 @@ function clearDisplay(state) {
 	};
 }
 
-function showEquasion(state) {
-	let answer = String(eval([...state.calculation].join('')));
+function showEquasion(state, numberOfRemovedTokens) {
+	let answer = eval([...state.calculation].join('')); // number answer
+	console.log(answer);
+	let precision = 20;
+	let answerRounded = String(answer).split(''); // array of answer tokens
+	// loop reduces precission untill the equasion will fit onto the screen
+	while ([...state.calculation, '=', ...answerRounded].length > 20) {
+		precision--;
+		console.log(precision);
+		answerRounded = String(
+			answer
+				.toPrecision(precision)
+				.replace(/\.(0+)$/, '') // removes any trailing 0 or .
+				.replace(/(0+)e/, 'e')
+				.replace(/\.e/, 'e')
+		).split('');
+	}
+
 	return {
 		...state,
-		calculation: [...state.calculation, '=', answer],
-		display: [answer]
+		calculation: [...state.calculation, '=', ...answerRounded],
+		display: [...answerRounded]
 	};
 }
 

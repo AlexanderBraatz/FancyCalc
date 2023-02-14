@@ -267,7 +267,7 @@ function App() {
 							Finalised <time dateTime="2023-02-10">February 2, 2023</time>
 						</p>
 						<p>
-							View my projects{' '}
+							View my projects
 							<a
 								href="https://alexanderbraatz.github.io/PortfolioPage/"
 								target="_blank"
